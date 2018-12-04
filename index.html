@@ -1,27 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="stylesheets/main.css">
-  <script src="node_modules/howler/dist/howler.min.js"></script>
-  <script src="scripts/main.js" ></script>
-  <title>Drum Machine</title>
-</head>
-<body>
-  <div id="drum-machine">
-    <div id="display">
-      <div id="Q">Q</div>
-      <div id="W">W</div>
-      <div id="E">E</div>
-      <div id="A">A</div>
-      <div id="S">S</div>
-      <div id="D">D</div>
-      <div id="Z">Z</div>
-      <div id="X">X</div>
-      <div id="C">C</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="stylesheets/main.css" />
+    <script src="node_modules/howler/dist/howler.min.js"></script>
+    <script src="scripts/main.js"></script>
+    <title>Drum Machine</title>
+  </head>
+  <body>
+    <div id="drum-machine">
+      <div id="display">
+        <div class="drum-pad" data-key="Q">
+          Q <audio src="sounds/boom.wav" id="Q" class="clip"></audio>
+        </div>
+        <div class="drum-pad" data-key="W">
+          W <audio src="sounds/clap.wav" id="W" class="clip"></audio>
+        </div>
+        <div class="drum-pad" data-key="E">
+          E <audio src="sounds/hihat.wav" id="E" class="clip"></audio>
+        </div>
+        <div class="drum-pad" data-key="A">
+          A <audio src="sounds/kick.wav" id="A" class="clip"></audio>
+        </div>
+        <div class="drum-pad" data-key="S">
+          S <audio src="sounds/openhat.wav" id="S" class="clip"></audio>
+        </div>
+        <div class="drum-pad" data-key="D">
+          D <audio src="sounds/ride.wav" id="D" class="clip"></audio>
+        </div>
+        <div class="drum-pad" data-key="Z">
+          Z <audio src="sounds/snare.wav" id="Z" class="clip"></audio>
+        </div>
+        <div class="drum-pad" data-key="X">
+          X <audio src="sounds/tink.wav" id="X" class="clip"></audio>
+        </div>
+        <div class="drum-pad" data-key="C">
+          C <audio src="sounds/tom.wav" id="C" class="clip"></audio>
+        </div>
+      </div>
     </div>
-  </div>
-</body>
+  </body>
 </html>
