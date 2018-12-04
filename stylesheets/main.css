@@ -31,6 +31,7 @@ body {
   transition: 0.1s;
   box-shadow: 5px 5px 5px, 
   5px 5px 5px;
+  cursor: pointer;
 }
 
 /* Remove box shadow of element when key pressed */

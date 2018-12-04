@@ -1,6 +1,19 @@
 // Code to be passed to function which is executed once DOM content has been loaded
 var callback = function(){
   function playSound(){
+    if (event.type === "click"){
+      // Select specific audio element
+      var audio = document.querySelector(`audio[id="${this.getAttribute('data-key')}"]`);
+      // reset audio playback position to start - allows audio to reset each time key is pressed
+      audio.currentTime = 0;
+      //Add class to drum-pad element
+      this.classList.add("pressed");
+      // Change bg-color of .drum-pad to random color
+      this.style.backgroundColor = `rgb(${randomNum()}, ${randomNum()}, ${randomNum()})`;
+      // Change bg-color of body to random color
+      document.querySelector("body").style.backgroundColor = `rgb(${randomNum()}, ${randomNum()}, ${randomNum()})`;
+      audio.play();
+    }
     // convert keyCode from keypress event to letter
     var letter = String.fromCharCode(event.keyCode);
     // Select specific audio element
@@ -33,6 +46,8 @@ var callback = function(){
       // Set bg-color of body
       document.querySelector("body").style.backgroundColor = `rgb(${randomNum()}, ${randomNum()}, ${randomNum()})`;
     });
+
+    pad.addEventListener("click", playSound);
   });
 
   //Listen for keypress on document and play sound
